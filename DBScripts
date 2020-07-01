@@ -1,0 +1,50 @@
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[BMS_Users]') AND type in (N'U'))
+
+BEGIN
+CREATE TABLE dbo.BMS_Users (
+    ID int NOT NULL IDENTITY PRIMARY KEY,
+    UserName varchar(50) NULL,
+	UserPassword varchar(30) NULL,
+	Email  varchar(30)  NULL,
+	PAN    varchar(30)  NULL,
+	UserAddress  varchar(200)  NULL,
+	DOB       DATE
+);
+
+END
+
+
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[BMS_Loan_Details]') AND type in (N'U'))
+
+BEGIN
+CREATE TABLE dbo.BMS_Loan_Details (
+    ID int NOT NULL IDENTITY PRIMARY KEY,
+    LoanType varchar(50) NULL,
+	Amount int NULL,
+	ROI decimal(5,3) NULL , 
+    Duration int NULL,
+	UserID int 
+   
+);
+END
+
+
+
+IF  NOT EXISTS (SELECT * FROM sys.objects 
+WHERE object_id = OBJECT_ID(N'[dbo].[BMS_Account_Details]') AND type in (N'U'))
+
+BEGIN
+CREATE TABLE dbo.BMS_Account_Details (
+    ID int Not NULL IDENTITY PRIMARY KEY, 
+    AccountNumber int  NULL,
+	AccountBalance decimal (10,3) NULL,
+    TransactionDesc varchar (100) NULL,
+	TransactionType varchar (30)NULL,
+	TransactionDate Date,
+	UserID int 
+   
+);
+
+END
