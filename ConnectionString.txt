@@ -1,0 +1,26 @@
+Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+http://localhost:62907/Customers/api/add
+
+{
+    "UserName": "HBTest1",
+    "UserPassword": "Password123",
+    "Email": "test@gmail.com",
+    "PAN": "ABCD",
+    "UserAddress": "201 st rock, USA",
+    "DOB": "06-07-1987"
+}
+
+http://localhost:62907/Customers/api/Update
+{
+    "id": 1,
+    "UserName": "HBTest1",
+    "UserPassword": "Password123",
+    "Email": "test@gmail.com",
+    "PAN": "XYSE",
+    "UserAddress": "201 st rock, USA , 7000",
+    "DOB": "06-07-1987"
+}
+
+
+http://localhost:62907/Customers/api/get?customerId=1
