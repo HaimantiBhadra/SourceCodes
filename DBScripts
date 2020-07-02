@@ -48,3 +48,30 @@ CREATE TABLE dbo.BMS_Account_Details (
 );
 
 END
+
+CREATE TABLE [Accounts] (
+    [AccountId] int NOT NULL IDENTITY,
+    [AccountType] nvarchar(max) NULL,
+    [AccountOpeningDate] datetime2 NOT NULL,
+    [CashBalance] decimal(18, 2) NOT NULL,
+    [CustomerId] int NOT NULL,
+    CONSTRAINT [PK_Accounts] PRIMARY KEY ([AccountId])
+);
+GO
+
+
+CREATE TABLE [Loans] (
+    [LoanId] int NOT NULL IDENTITY,
+    [AccountId] int NOT NULL,
+    [LoanType] nvarchar(max) NULL,
+    [LoanStartDate] datetime2 NOT NULL,
+    [LoanDurationMonth] int NOT NULL,
+    [LoanAmount] decimal(18, 2) NOT NULL,
+    [ROI] decimal(18, 2) NOT NULL,
+    [CustomerId] int NOT NULL,
+    CONSTRAINT [PK_Loans] PRIMARY KEY ([LoanId])
+);
+GO
+
+
+
