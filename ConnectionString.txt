@@ -24,3 +24,27 @@ http://localhost:62907/Customers/api/Update
 
 
 http://localhost:62907/Customers/api/get?customerId=1
+
+http://localhost:62907/KYCUpload/api/uploadFile?filePath=C:\Users\HP\Desktop\1_AccountStatement.csv
+
+https://localhost:44332/accounts/api/add
+
+{
+"AccountType": "current",
+"AccountOpeningDate": "02-07-2020",
+"CashBalance": 500.00,
+"CustomerId": 1
+}
+
+https://localhost:44332/accounts/api/download?customerId=2
+
+https://localhost:44332/accounts/api/applyloan
+
+{
+    "LoanType": "HomeLoan",
+    "LoanStartDate": "02-07-2020",
+    "LoanDurationMonth": 12,
+    "LoanAmount": 100000,
+    "ROI": 11.4,
+    "CustomerId ": 1
+}
