@@ -48,3 +48,9 @@ https://localhost:44332/accounts/api/applyloan
     "ROI": 11.4,
     "CustomerId ": 1
 }
+
+
+
+
+Access key ID -AKIA4ADZTZ4GQRCYX4WJ	
+Secret access key - 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
